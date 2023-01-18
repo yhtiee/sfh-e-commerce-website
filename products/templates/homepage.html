@@ -1,0 +1,281 @@
+{% extends "base.html"%}
+{% load static %}
+{% block infuse %}
+<style>
+    .home_body{
+        overflow: hidden;
+        position: relative;
+        top: 69px;
+    }
+    .header{
+        background-color: #EAE8E7;
+        height: 89.9vh;
+        display: flex;
+    }
+
+    .header_left{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header_right{
+        width: 50%;
+    }
+
+    .hero{
+        height: 38.9rem;
+    }
+
+    .display_text > h4{
+        font-size: x-large;
+        color: goldenrod;
+    }
+
+    .display_text > h1{
+        font-size: 3rem;
+        color: navy;
+    }
+
+    .btn{
+        text-decoration: none;
+        background-color: navy;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: larger;
+        font-weight: bold;
+        width: 10rem;
+        border-radius: 5px;
+    }
+
+    .btn:hover{
+        cursor: pointer;
+    }
+
+    .product_category{
+        padding: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        /* justify-content: space-between; */
+        gap: 2rem;
+        margin-top: 40px;
+    }
+
+    .category{
+        width: 21.7%;
+        /* height: 250px; */
+        border: 1px solid #EAE8E7 ;
+        display: flex;
+    }
+
+    .category:hover{
+        cursor: pointer;
+        background-color: #EAE8E7;
+        opacity: 1;
+        z-index: 6;
+    }
+
+    .cat_left{
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        /* height: 300px; */
+    }
+
+    .cat_name{
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .cat_desc{
+        font-size: 14px;
+        color: #333;
+    }
+
+    .cat_left_img{
+        height: 100px;
+    }
+
+    .featured{
+        margin-top: 20px;
+        padding: 40px;
+    }
+
+    .featured_products{
+        font-size: 36px;
+        font-weight: bold
+    }
+
+    .list_product_link > ul{
+        display: flex;
+        gap: 4rem;
+    }
+
+    .list_product_link > ul > li{
+        padding: 5px;
+        margin-left: -40px;
+    }
+
+    .list_product_link > ul > li:hover{
+        border-bottom: 1px solid gray;
+        cursor: pointer;
+    }
+
+    .display1{
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .product{
+        width: 100%;
+        border: 1px solid #EAE8E7 ;
+        height: 450px;
+    }
+
+    .top_product{
+        background-color: #EAE8E7;
+        height: 370px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product_img{
+        height: 250px;
+    }
+
+    .action{
+        margin-top: 200px;
+        padding: 10px;
+        border: 3px solid white;
+        color: white;
+        font-weight: bold;
+    }
+
+    .bottom_product{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .product_name{
+        font-size: 14px;
+        color: #999;
+    }
+
+    .cost{
+        font-size: 14px;
+        color: #666;
+    }
+</style>
+<div class="home_body">
+    <div class="header">
+        <div class="header_left">
+            <div class="display_text">
+                <h4> Sharon Fashion Hub</h4>
+                <h1> UNISEX STORE >> </h1>
+                <button class="btn">Shop</button>
+            </div>
+        </div>
+        <div class="header_right"><img class="hero" src="{% static 'hero.png' %}" alt=""></div>
+    </div>
+    <div class="product_category">
+        <div class="category">
+            <div class="cat_left">
+                <span class="cat_name">Women</span>
+                <span class="cat-desc">Crop Tops</span>
+                <!-- <span class="action">Shop Now</span> -->
+            </div>
+            <div class="right">
+                <img class="cat_left_img" src="{% static 'croptop.png' %}" alt="">
+            </div>
+        </div>
+        <div class="category">
+            <div class="cat_left">
+                <span class="cat_name">Unisex</span>
+                <span class="cat-desc">Tye-Dye</span>
+                <!-- <span class="action">Shop Now</span> -->
+
+            </div>
+            <div class="right">
+                <img class="cat_left_img" src="{% static 'hero.png' %}" alt="">
+            </div>
+        </div>
+        <div class="category">
+            <div class="cat_left">
+                <span class="cat_name">Unisex</span>
+                <span class="cat-desc">Plain Tees</span>
+                <!-- <span class="action">Shop Now</span> -->
+
+            </div>
+            <div class="right">
+                <img class="cat_left_img" src="{% static 'plain-Tees2.png' %}" alt="">
+            </div>
+        </div>
+        <div class="category">
+            <div class="cat_left">
+                <span class="cat_name">Unisex</span>
+                <span class="cat-desc">Hoddies</span>
+                <!-- <span class="action">Shop Now</span> -->
+
+            </div>
+            <div class="right">
+                <img class="cat_left_img" src="{% static 'croptop.png' %}" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div class="featured">
+        <span class="featured_products"> FEATURED PRODUCTS </span>
+        <div class="list_product_link">
+            <ul>
+                <li>Tie-Dye</li>
+                <li>Plain-Tees</li>
+                <li>Crop Tops</li>
+                <li>Caps</li>
+            </ul>
+        </div>
+        <div class="products_display">
+            <div class="display1">
+                <a class="product" href="">
+                    <div class="top_product">
+                        <img class="product_img" src="{% static 'shirt1.png' %}" alt="">
+                    </div>
+                    <div class="bottom_product">
+                        <span class="product_name"> Black and Brown Tie Dye Shirt</span>
+                        <span class="cost">₦6000.00</span>
+                    </div>
+                </a>
+                <a class="product" href="">
+                    <div class="top_product">
+                        <img class="product_img" src="{% static 'shirt5.png' %}" alt="">
+                    </div>
+                    <div class="bottom_product"></div>
+                </a>
+                <a class="product" href="">
+                    <div class="top_product">
+                        <img class="product_img" src="{% static 'shirt2.png' %}" alt="">
+                    </div>
+                    <div class="bottom_product"></div>
+                </a>
+                <a class="product" href="">
+                    <div class="top_product">
+                        <img class="product_img" src="{% static 'shirt3.png' %}" alt="">
+                    </div>
+                    <div class="bottom_product"></div>
+                </a>
+            </div>
+            <div class="display2"></div>
+            <div class="display3"></div>
+            <div class="display4"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

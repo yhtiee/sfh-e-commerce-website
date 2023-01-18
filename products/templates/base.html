@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="/sfh_Website/products/static/logosfh.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharon Fashion Hub Store</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .nav_wrapper{
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 10;
+        background-color: white;
+    }
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid gray;
+    }
+
+    .logo_wrapper{
+        display: flex;
+        align-items: center;
+        width: 10%;
+        margin-left: 30px;
+        gap: 0.5rem;
+    }
+
+    .logo_wrapper > h4{
+        font-weight: bold;
+    }
+
+    .links_wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 85%;
+    }
+
+    .links_list{
+        display: flex;
+        gap: 2rem;
+        margin-left: 20px;
+    }
+
+    .links_list > li{
+        padding: 5px;
+    }
+
+    .links_list2{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .links_list > li > a{
+        color: black;
+        /* font-weight: bold; */
+    }
+
+
+
+
+    .hamburger{
+        height: 25px;
+    }
+
+    .sfh{
+        color: goldenrod;
+    }
+
+    .store{
+        color: navy;
+    }
+
+    .on{
+        border-bottom: 1px solid navy;
+    }
+
+</style>
+<body>
+    <div class="nav_wrapper">
+        <nav class="navbar">
+            <div class="logo_wrapper"> <h1 class="sfh">SFH</h1> <h1 class="store">STORE</h1> </div>
+            <div class="links_wrapper">
+                <ul class="links_list">
+                    <li {% if active == "home"%}
+                            class="on"
+                        {% endif %}>
+                        <a href="{% url 'home' %}" >
+                        Home</a>
+                    </li>
+                    <li>
+                        <a href="#"> Shop</a>
+                    </li>
+                    <li> 
+                        <a href="#">Blog</a>
+                    </li>
+                    <li> 
+                        <a href="#">About</a>
+                    </li>
+                    <li> 
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+                <ul class="links_list2">
+                    <li>
+                        <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/null/shopping-cart--v1.png"/></a>
+                    </li>
+                    <li> 
+                        <a href="#"><img src="https://img.icons8.com/ios-filled/50/null/menu--v5.png" class="hamburger"/></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div>
+        {% block infuse%}
+
+        {% endblock %}
+    </div>
+
+    <div>
+        <footer></footer>
+    </div>
+</body>
+</html>
